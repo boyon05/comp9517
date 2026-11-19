@@ -1,0 +1,55 @@
+RT-DETR / RT-DETRv2 THIRD-PARTY ATTRIBUTION
+============================================
+
+This directory contains an adapted copy of the official RT-DETR/RT-DETRv2
+implementation.
+
+Upstream project: https://github.com/lyuwenyu/RT-DETR
+Upstream copyright: Copyright (c) 2023 lyuwenyu
+License: Apache License 2.0
+Full license text: https://www.apache.org/licenses/LICENSE-2.0
+
+UPSTREAM COMPONENTS
+-------------------
+
+The following parts are based on the upstream RT-DETRv2 implementation and
+remain covered by its Apache License 2.0 terms:
+
+  * src/core/
+  * src/data/
+  * src/misc/
+  * src/nn/
+  * src/optim/
+  * src/solver/
+  * src/zoo/rtdetr/
+  * tools/train.py
+  * the RT-DETRv2 model and runtime configuration files
+
+PROJECT-SPECIFIC ADAPTATIONS
+----------------------------
+
+This project adapts the upstream implementation for one-class beach-bird
+detection. The adaptations include:
+
+  * configs/dataset/coco_detection.yml: one-class COCO dataset paths and bird
+    category configuration;
+  * configs/rtdetrv2/rtdetrv2_r50vd_m_7x_coco.yml: project training settings
+    for the default three-level model;
+  * configs/rtdetrv2/rtdetrv2_r50vd_m_7x_coco_stride4.yml: four-level feature
+    pyramid using the backbone's stride-4 feature map;
+  * tools/convert.py: project-created conversion from YOLO text labels to COCO
+    JSON annotations;
+  * references/deploy/rtdetrv2_torch.py: project inference and visualization
+    entry point;
+  * dataset paths, evaluation overrides, and documentation for this project.
+
+The trained checkpoints and generated evaluation outputs are project artifacts
+and are not part of the upstream RT-DETR distribution.
+
+LICENSE NOTICE
+--------------
+
+The upstream components remain subject to the Apache License 2.0. A copy of
+that license is available at the URL above and should be distributed with any
+redistribution of the upstream-derived code. Changes made in this project do
+not alter the upstream license terms.

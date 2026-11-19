@@ -1,0 +1,29 @@
+Method 2 - Annotated test dataset results
+Model: method2_single_stage\results\train_runs\single_stage_baseline\weights\best.pt
+Checkpoint SHA256: 42827e300985ff9ca92ddf40bf1612641c1ce3cf0ff9dceed62121195f488030
+Trained model: YOLOv8s; strategy: Strategy_2_Advanced; training epochs: 30.
+Dataset: common\dataset
+Model and dataset paths are relative to the repository root.
+Device: CUDA GPU 0; float32 inference
+Test images included and saved: 240
+Annotated images used for AP: 240
+Ground-truth bird boxes: 1518
+Predicted boxes across all images (confidence >= 0.25): 1559
+AP@0.5: 0.88765650935477824
+mAP@0.5:0.95: 0.49483555445155991
+Precision: 0.89230781019692662
+Recall: 0.79973649538866931
+Ultralytics 101-point interpolated single-class AP at IoU 0.5; mAP50_95 averages IoU thresholds 0.50:0.05:0.95. This differs from Method 1 all-points AP interpolation.
+Ultralytics validation precision and recall at its best-F1 operating point, not necessarily visualization confidence 0.25.
+AP evaluation confidence threshold: 0.001; visualization threshold: 0.25.
+Inference settings: imgsz=640; NMS IoU=0.7; max_det=300; batch=1; three warm-up calls excluded.
+Total inference time: 1.212239 seconds
+Mean inference time: 5.050996 ms/image
+Mean model forward-pass time: 2.723375 ms/image
+Total per-image processing time: 1.787808 seconds
+Mean per-image processing time: 7.449199 ms/image
+Separate AP validation wall time: 3.097872 seconds
+Timing CSV: per_image.csv
+inference_ms: synchronized predict() including preprocessing, forward pass, NMS/postprocessing, and CPU box transfer. model_inference_ms: Ultralytics forward-pass timing only. processing_ms: image/label loading, predict(), red/green drawing, and image saving. Timings exclude model loading, three warm-up calls, and the separate AP validation run.
+Output images: test (red boxes = predictions; green boxes = ground-truth birds). Original filenames are preserved.
+No training, test-time parameter tuning, or changes to Method 1 were performed.

@@ -1,0 +1,24 @@
+RT-DETRv2 Beach Bird Detection — Default Params
+
+Training configuration:
+configs\rtdetrv2\rtdetrv2_r50vd_m_7x_coco.yml
+Best validation epoch: 81
+
+Validation results:
+AP@[IoU=0.50:0.95]: 0.5171151121772061
+AP50: 0.899
+AP75: 0.497
+AP small: 0.344
+AP medium: 0.496
+AP large: 0.714
+AR100: 0.606
+
+Held-out test results:
+AP@[IoU=0.50:0.95]: 0.535
+AP50: 0.926
+AP75: 0.536
+AP small: 0.343
+AP medium: 0.580
+AP large: 0.730
+AR100: 0.626
+

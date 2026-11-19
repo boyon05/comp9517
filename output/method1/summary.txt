@@ -1,0 +1,14 @@
+Method 1 - Annotated test dataset results
+Test images included and saved: 240
+Annotated images used for AP: 240
+Ground-truth bird boxes: 1518
+Predicted boxes across the 240 annotated images: 305288
+AP@0.5: 0.00016022220502527661
+AP is single-class all-points interpolated AP at IoU >= 0.5 (not COCO AP averaged across IoU thresholds).
+AP is unchanged because it already used only these 240 annotated images.
+Total inference time: 5.625388 seconds
+Mean inference time: 23.439116 ms/image
+Total per-image processing time: 7.698914 seconds
+Mean per-image processing time: 32.078810 ms/image
+Output images: test (red boxes = predictions; green boxes = ground-truth birds). All 240 annotated images retain their original filenames.
+Detection parameters: threshold=21; min_area=6; remaining parameters unchanged.

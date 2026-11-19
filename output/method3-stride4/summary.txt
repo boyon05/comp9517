@@ -1,0 +1,27 @@
+Method 3 (stride4) - Annotated test dataset results
+Model: method3_two_stage\output\stride4.pth
+Configuration: method3_two_stage\configs\rtdetrv2\rtdetrv2_r50vd_m_7x_coco_stride4.yml
+Dataset: common\dataset
+Annotations: common\dataset\annotations\instances_test.json
+Checkpoint SHA256: d5e43194b2ec46f1a621506e34759ba9c73fa37fa6395be4101af41735546d6b
+Checkpoint state: ema.module; recorded last_epoch: 52
+Input size: 800 x 800; float32; batch size 1
+Test images included and saved: 240
+Ground-truth bird boxes: 1518
+Predicted boxes (confidence >= 0.25): 2247
+AP@0.5: 0.92181307237926402
+mAP@0.5:0.95: 0.53775272531574914
+Precision (confidence 0.25, IoU 0.5): 0.63595905651980422
+Recall (confidence 0.25, IoU 0.5): 0.94137022397891967
+TP: 1429; FP: 818; FN: 89
+Official pycocotools COCO 101-recall-point AP; all areas, maxDets=100. AP50 is IoU 0.5; mAP50_95 averages IoU thresholds 0.50:0.05:0.95.
+AP confidence cutoff: 0.001; top 300 queries; no NMS.
+Total inference time: 7.303452 seconds
+Mean inference time: 30.431048 ms/image
+Mean model forward-pass time: 22.378194 ms/image
+Total processing time: 8.502997 seconds
+Mean processing time: 35.429155 ms/image
+inference_ms: synchronized RGB conversion, resizing, tensor/device transfer, forward pass, postprocessing, and CPU box transfer. model_inference_ms: forward pass only. processing_ms additionally includes image reading, matching/recording detections, drawing, and saving. Model loading, warm-up, and AP computation are excluded.
+Three warm-up calls were excluded from timings.
+Output images: test (red predictions; green ground truth). Timing CSV: per_image.csv.
+No training or test-time parameter tuning was performed. Paths are relative to the repository root.

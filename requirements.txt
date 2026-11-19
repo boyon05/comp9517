@@ -1,0 +1,20 @@
+# CUDA 12.8 builds; exact local-version pins prevent CPU-only PyTorch installs.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+PyYAML>=6.0
+tqdm>=4.65.0
+seaborn>=0.12.0
+scipy>=1.10.0
+numpy>=2.0.2,<3
+Pillow>=10.0
+packaging>=23.0
+rich>=13.0
+faster-coco-eval>=1.6.6
+tensorboard
+pycocotools
